@@ -18,7 +18,7 @@ public class GatewayServiceApplication {
 						.path("/api/v1/client/**")
 						.uri("lb://client-service"))
 				.route("auth-service", r -> r
-						.path("/oauth/token")
+						.path("/v1/oauth/token")
 						.uri("lb://auth-service"))
 				.build();
 	}
